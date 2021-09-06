@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Examen Tecnico</title>
+</head>
+<body>
+    <div class="container">
+        
+        <form action="formulario.php" class="form" method="POST" name="formu" onchange="habilitarBoton()">
+            <h1>Formulario</h1>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+    
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" required>
+    
+            <label for="direccion">Direccion:</label>
+            <input type="text" id="direccion" name="direccion" required>
+    
+            <label for="genero">Genero:</label>
+            <select name="genero" id="genero">
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+            </select>
+    
+            <label for="pais">Pais:</label>
+            <select name="pais" id="pais" onchange="cambia_provincia()">
+                <option value="0" selected>Seleccionar...</option>
+                <option value="1">Mexico</option>
+                <option value="2">Argentina</option>
+                <option value="3">Chile</option>
+            </select>
+    
+            <label for="estado">Estado:</label>
+            <select name="estado" id="estado">
+                <option value="-">
+                 -
+                </option>
+            </select>
+    
+            <button id="botonEnviar">Enviar</button>
+        </form>
+
+    </div>
+
+<script src="formulario.js">
+   
+
+</script>
+</body>
+</html>
